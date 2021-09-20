@@ -19,12 +19,14 @@ async function connect() {
   return 'done';
 }
 
-function insertAlarm(alarm) {
+async function insertAlarm(alarm) {
   console.log("CHEGUEI NO INSERT");
   const alarmToInsert = alarm;
   console.log({ alarmToInsert: alarmToInsert });  
 
   console.log("VOU INSERIR AGORA");      
+
+  await connect();
   try {
     db.collection("alarm").insertOne(alarmToInsert,
       {
@@ -46,7 +48,6 @@ async function getAllDocuments() {
     console.log(result);
     return result;
   });
-
 
 }
 

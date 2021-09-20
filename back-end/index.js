@@ -12,14 +12,14 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-/*
-app.post('/alarm', async function(req, res) {
-    console.log("Entrei em alarm");
-    //console.log({body: req.body});
-    const data = req.body;
-    sendToDatabase(data);
-});
-*/
+
+// app.post('/alarm', async function(req, res) {
+//     console.log("Entrei em alarm");
+//     //console.log({body: req.body});
+//     const data = req.body;
+//     sendToDatabase(data);
+// });
+
 const alarmTypesMap = {
     1: 'Intrusão',
     2: 'Temperatura',
